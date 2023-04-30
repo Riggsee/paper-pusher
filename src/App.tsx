@@ -26,12 +26,15 @@ const items: MenuProps['items'] = [
           key: 'controlDevices'
         },
         {
-         label: 'Driving without a license',
-         key: 'withoutLicense'
+         label: 'Suspended License',
+         key: 'suspendedLicense'
         },
         {
          label: 'Joyriding',
          key: 'joyriding'
+        },{
+          label: 'Negligent Driving',
+          key: 'negligentDriving'
         }
       ],
     },
