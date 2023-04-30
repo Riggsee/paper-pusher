@@ -91,7 +91,6 @@ const App: React.FC = () => {
    await invoke('hide_window')
    let text: string = await invoke("template",{key: e.key})
     await writeText(text)
-    setCurrent(e.key);
   };
 
   return <Menu id="menu" onClick={onClick} selectedKeys={[current]} mode="vertical" theme="dark" items={items} />;
