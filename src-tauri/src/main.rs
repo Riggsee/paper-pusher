@@ -25,6 +25,7 @@ fn make_tray() -> SystemTray {     // <- a function that creates the system tray
           window.show();
           window.center();   
           window.set_focus();
+          window.set_always_on_top(true);
           menu_item.set_title("Hide");
         }
       }
