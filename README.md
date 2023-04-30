@@ -1,7 +1,5 @@
-# Tauri + React + Typescript
+# Paper Pusher Nopixel report template provider
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+Paper pusher will ran in the backgroud till you hit the "Alt+l" shortcut and when you do a menu will appear. selecting a crime in that menu will add the template to your clipboard then all you have to do is paste it and edit it for yourself 
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+![Screenshot_20230430_230945](https://user-images.githubusercontent.com/63582793/235376472-62567955-9f2d-4d97-89e6-ab75f856b77d.png)
