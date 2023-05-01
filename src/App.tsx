@@ -67,10 +67,6 @@ const items: MenuProps['items'] = [
         label: 'Felony Possession with intent to distribute',
         key: 'intentToDistribute'
       },
-      {
-         label: 'Felony Possession of a "DRUG"',
-         key: 'felonyPossession'
-      }
     ],
 
   },

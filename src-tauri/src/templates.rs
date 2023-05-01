@@ -10,7 +10,6 @@ They were give a ticket for Failure to obey traffic control devices.";
 
 pub const NEGLIGENT_DRIVING: &str = "negligent driving template";
 
-pub const FELONY_POSSESSION: &str = "felony possesion template"; 
 
 
 pub const GRS: &str = "GRS template"; 

@@ -70,7 +70,6 @@ fn template(key: &str) -> String {
         "intentToDistribute" => return INTENT_TO.to_owned(),
         "GRS" => return GRS.to_owned(),
         "houseRobbery" => return HOUSE_ROBBERY.to_owned(),
-        "felonyPossession" => return FELONY_POSSESSION.to_owned(),
         _ => return "couldn't find the template".to_owned(),
 
     }
