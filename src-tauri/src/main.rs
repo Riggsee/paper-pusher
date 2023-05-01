@@ -1,8 +1,10 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+mod templates;
 use std::process;
+use templates::*;
 
-use tauri::{api::file::read_string, *};
+use tauri::*;
 fn make_tray() -> SystemTray {
     // <- a function that creates the system tray
     let menu = SystemTrayMenu::new()
@@ -55,9 +57,23 @@ fn show_window(app: AppHandle) {
 
 #[tauri::command]
 fn template(key: &str) -> String {
-    let path = format!("./templates/{}.txt", key);
-    let text = read_string(path).unwrap();
-    return text;
+    match key {
+        "speedingTicket" => return SPEEDING_TICKET.to_owned(),
+        "controlDevices" => return CONTROL_DEVICES.to_owned(),
+        "suspendedLicense" => return SUSPENDED_LICENSE.to_owned(),
+        "joyriding" => return JOYRIDING.to_owned(),
+        "negligentDriving" => return NEGLIGENT_DRIVING.to_owned(),
+        "robbery" => return BANK.to_owned(),
+        "boost" => return BOOST.to_owned(),
+        "methRun" => return METH_RUN.to_owned(),
+        "saleOfDrugs" => return SALE_OF_DRUGS.to_owned(),
+        "intentToDistribute" => return INTENT_TO.to_owned(),
+        "GRS" => return GRS.to_owned(),
+        "houseRobbery" => return HOUSE_ROBBERY.to_owned(),
+        "felonyPossession" => return FELONY_POSSESSION.to_owned(),
+        _ => return "couldn't find the template".to_owned(),
+
+    }
 }
 
 fn main() {

@@ -26,7 +26,6 @@
     },
     "bundle": {
       "active": true,
-      "resources": ["templates/*"],
       "icon": [
         "icons/icon.png",
         "icons/icon.icns",
