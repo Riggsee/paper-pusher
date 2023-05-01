@@ -3,10 +3,10 @@ SUSPECT disregarded orders to pull over and started recklessly evading by going 
 at LOCATION after resisting arrest by breaking out of cuffs. Upon further inspection there were signs of tampering in the driver side of the CAR. Car was documented and impounded.
 Suspect was charged with Grand Theft Auto, Reckless evading and Resisting arrest which they plead guilty/not guilty to.";
 
-pub const CONTROL_DEVICES: &str = "OFFICER saw CAR going through red light(s) and attempted to pull it over. Suspect complied and identified themselves.
+pub const CONTROL_DEVICES: &str = "OFFICER saw CAR going through red light(s) and attempted to pull it over. SUSPECT complied and identified themselves.
 They were give a ticket for Failure to obey traffic control devices.";
 
-pub const NEGLIGENT_DRIVING: &str = "OFFICER saw CAR going through red light(s) and going OVERSPEEDLIMIT at a SPEEDLIMIT. Officer attempted to pull the CAR over, Suspect complied and identified themselves.
+pub const NEGLIGENT_DRIVING: &str = "OFFICER saw CAR going through red light(s) and going OVERSPEEDLIMIT at a SPEEDLIMIT. Officer attempted to pull the CAR over, SUSPECT complied and identified themselves.
 They were give a ticket for Negligent Driving.";
 
 pub const GRS: &str = "GRS template";
@@ -19,10 +19,10 @@ SUSPECT had scratches on their hands and their DNA matched with the blood on the
 pub const INTENT_TO: &str = "intent to distribute template";
 
 pub const JOYRIDING: &str = "joyriding template";
-
 pub const METH_RUN: &str = "meth/heroin run template";
 
 pub const BANK: &str = "robbery of a financial institue template";
+
 
 pub const SALE_OF_DRUGS: &str = "Sale of drugs template";
 
