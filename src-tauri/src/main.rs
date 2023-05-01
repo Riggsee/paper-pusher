@@ -3,6 +3,7 @@
 mod templates;
 use std::process;
 use templates::*;
+use tauri_plugin_autostart::MacosLauncher;
 
 use tauri::*;
 fn make_tray() -> SystemTray {
@@ -51,7 +52,7 @@ fn show_window(app: AppHandle) {
     window.center().unwrap();
     window.set_focus().unwrap();
     window.set_always_on_top(true).unwrap();
-    menu_item.set_title("Hide").unwrap();
+    menu_item.set_title("Hide").unwrap(); 
 }
 
 #[tauri::command]
@@ -75,6 +76,7 @@ fn template(key: &str) -> String {
 
 fn main() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_autostart::init(MacosLauncher::LaunchAgent, None))
         .system_tray(make_tray())
         .on_system_tray_event(handle_tray_event)
         .invoke_handler(tauri::generate_handler![hide_window, show_window, template])

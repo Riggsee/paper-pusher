@@ -13,6 +13,9 @@ import type { MenuProps } from "antd";
 import { Menu } from "antd";
 import { register } from "@tauri-apps/api/globalShortcut";
 import { writeText } from "@tauri-apps/api/clipboard";
+import { enable } from "tauri-plugin-autostart-api";
+
+
 
 register("Alt+L", async () => {
   await invoke("show_window");
@@ -90,6 +93,10 @@ const items: MenuProps["items"] = [
 
 const App: React.FC = () => {
   const [current, setCurrent] = useState("mail");
+
+  async () =>{
+    await enable();
+  }
 
   const onClick: MenuProps["onClick"] = async (e) => {
     await invoke("hide_window");
