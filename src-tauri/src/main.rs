@@ -35,7 +35,6 @@ fn handle_tray_event(app: &AppHandle, event: SystemTrayEvent) {
     }
 }
 
-
 #[tauri::command]
 fn hide_window(app: AppHandle) {
     let window = app.get_window("main").unwrap();
@@ -71,7 +70,6 @@ fn template(key: &str) -> String {
         "GRS" => return GRS.to_owned(),
         "houseRobbery" => return HOUSE_ROBBERY.to_owned(),
         _ => return "couldn't find the template".to_owned(),
-
     }
 }
 
@@ -79,11 +77,7 @@ fn main() {
     tauri::Builder::default()
         .system_tray(make_tray())
         .on_system_tray_event(handle_tray_event)
-        .invoke_handler(tauri::generate_handler![
-            hide_window,
-            show_window,
-            template
-        ])
+        .invoke_handler(tauri::generate_handler![hide_window, show_window, template])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
