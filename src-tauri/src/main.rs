@@ -2,8 +2,8 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 mod templates;
 use std::process;
-use templates::*;
 use tauri_plugin_autostart::MacosLauncher;
+use templates::*;
 
 use tauri::*;
 fn make_tray() -> SystemTray {
@@ -52,7 +52,7 @@ fn show_window(app: AppHandle) {
     window.center().unwrap();
     window.set_focus().unwrap();
     window.set_always_on_top(true).unwrap();
-    menu_item.set_title("Hide").unwrap(); 
+    menu_item.set_title("Hide").unwrap();
 }
 
 #[tauri::command]
@@ -61,13 +61,11 @@ fn template(key: &str) -> String {
         "speedingTicket" => return SPEEDING_TICKET.to_owned(),
         "controlDevices" => return CONTROL_DEVICES.to_owned(),
         "suspendedLicense" => return SUSPENDED_LICENSE.to_owned(),
-        "joyriding" => return JOYRIDING.to_owned(),
         "negligentDriving" => return NEGLIGENT_DRIVING.to_owned(),
         "robbery" => return BANK.to_owned(),
         "boost" => return BOOST.to_owned(),
         "methRun" => return METH_RUN.to_owned(),
         "saleOfDrugs" => return SALE_OF_DRUGS.to_owned(),
-        "intentToDistribute" => return INTENT_TO.to_owned(),
         "GRS" => return GRS.to_owned(),
         "houseRobbery" => return HOUSE_ROBBERY.to_owned(),
         _ => return "couldn't find the template".to_owned(),
@@ -76,7 +74,10 @@ fn template(key: &str) -> String {
 
 fn main() {
     tauri::Builder::default()
-        .plugin(tauri_plugin_autostart::init(MacosLauncher::LaunchAgent, None))
+        .plugin(tauri_plugin_autostart::init(
+            MacosLauncher::LaunchAgent,
+            None,
+        ))
         .system_tray(make_tray())
         .on_system_tray_event(handle_tray_event)
         .invoke_handler(tauri::generate_handler![hide_window, show_window, template])

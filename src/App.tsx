@@ -40,10 +40,6 @@ const items: MenuProps["items"] = [
         key: "suspendedLicense",
       },
       {
-        label: "Joyriding",
-        key: "joyriding",
-      },
-      {
         label: "Negligent Driving",
         key: "negligentDriving",
       },
@@ -65,19 +61,9 @@ const items: MenuProps["items"] = [
     icon: <AlertOutlined />,
   },
   {
-    label: "Drug Crimes",
-    key: "Submenu",
+    label: "Sale of Drugs",
+    key: "saleOfDrugs",
     icon: <ExperimentOutlined />,
-    children: [
-      {
-        label: "Sale of Drugs",
-        key: "saleOfDrugs",
-      },
-      {
-        label: "Felony Possession with intent to distribute",
-        key: "intentToDistribute",
-      },
-    ],
   },
   {
     label: "Gang Related Shooting",
