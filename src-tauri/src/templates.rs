@@ -1,14 +1,14 @@
 pub const BOOST: &str = 
 "OFFICER responded to dispatch call about CAR being stolen at LOCATION. Upon arriving at scene OFFICER saw the CAR and attempted to pull it over. SUSPECT disregarded 
-orders to pull over and started recklessly evading by going over 100mph and driving on opposite lanes. Suspect was eventually apprehended at LOCATION after resisting 
-arrest by breaking out of cuffs. Upon further inspection there were signs of tampering in the driver side of the CAR. Car was documented and impounded. Suspect was 
-charged with Grand Theft Auto, Reckless evading and Resisting arrest which they plead guilty/not guilty to.";
+orders to pull over and started recklessly evading by engaging in a high speed vehicle chase. Suspect was eventually apprehended at LOCATION. Upon further inspection there were signs of tampering with the vehicle. Car was documented and impounded. Suspect was 
+charged with CHARGES in which they plead guilty/not guilty to.";
 
 pub const CONTROL_DEVICES: &str = 
-"OFFICER saw CAR going through red light(s) and attempted to pull it over. SUSPECT complied and identified themselves. They were give a ticket for Failure to obey traffic control devices.";
+"OFFICER saw CAR going through red light(s) and attempted to pull it over. SUSPECT complied and identified themselves my showing their identification card. They were give a ticket for Failure to obey traffic control devices.";
 
 pub const NEGLIGENT_DRIVING: &str = 
-"OFFICER saw CAR going through red light(s) and going OVERSPEEDLIMIT at a SPEEDLIMIT. OFFICER attempted to pull the CAR over, SUSPECT complied and identified themselves. They were give a ticket for Negligent Driving.";
+"OFFICER saw CAR moving at high speeds through AREA. Radar displayed that the car was going at SPEED through crowded city streets / residential areas. Driver was pulled over and verified himself as SUSPECT through his physical ID car. Driver was charged with Reckless Driving because he posed a
+danger to himsel and the others driving around him at that time.";
 
 pub const GRS: &str = 
 "OFFICER responded to shots fired dispatch call at LOCATION. Upon arriving at the location OFFICER found several injured people at the ground. After making sure scene is safe,
@@ -42,4 +42,5 @@ pub const SPEEDING_TICKET: &str =
 "OFFICER clocked CAR going OVERSPEEDLIMIT on a SPEEDLIMIT. SUSPECT complied after being told to pull over and identified themselves. SUSPECT was issued a third/second/first degree speeding ticket.";
 
 pub const SUSPENDED_LICENSE: &str = 
-"OFFICER pulled over CAR in LOCATION for REASON. SUSPECT complied and identified themselves however their license was suspended. SUSPECT was arrested for operating a vehicle with a suspended license and their car was impounded.";
+"OFFICER attempted to pull over CAR at LOCATION. Upon initiating the vehicle stop the driver attempted to flee in the vehicle. Driver's vehicle was abandoned/disabled and the suspect was apprehended. Suspect later
+was identified as NAME and was charged with Felony Invasion. Suspect plead PLEA to these charges.";
