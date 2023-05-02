@@ -36,17 +36,17 @@ const items: MenuProps["items"] = [
         key: "controlDevices",
       },
       {
-        label: "Suspended License",
+        label: "Felony Evasion",
         key: "suspendedLicense",
       },
       {
-        label: "Negligent Driving",
+        label: "Reckless Driving",
         key: "negligentDriving",
       },
     ],
   },
   {
-    label: "Robbery of a financial institue",
+    label: "Store Robbery",
     key: "robbery",
     icon: <BankOutlined />,
   },
@@ -56,17 +56,12 @@ const items: MenuProps["items"] = [
     icon: <CarOutlined />,
   },
   {
-    label: "Meth/Heroin Run",
-    key: "methRun",
-    icon: <AlertOutlined />,
-  },
-  {
     label: "Sale of Drugs",
     key: "saleOfDrugs",
     icon: <ExperimentOutlined />,
   },
   {
-    label: "Gang Related Shooting",
+    label: "Shooting",
     key: "GRS",
     icon: <AimOutlined />,
   },
